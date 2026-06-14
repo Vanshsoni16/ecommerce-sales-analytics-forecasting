@@ -19,10 +19,12 @@ Analyze sales trends, performance, and forecast future revenue using machine lea
 """)
 
 # Load Data
-df = pd.read_csv(
-    r"C:\Users\vansh soni\PROJECT_2\data\processed\cleaned_sales.csv"
+import os
 
-)
+file_path = os.path.join("data", "processed", "cleaned_sales.csv")
+df = pd.read_csv(file_path)
+
+
 st.sidebar.title("🎛️ Control Panel")
 
 selected_region = st.sidebar.selectbox(
