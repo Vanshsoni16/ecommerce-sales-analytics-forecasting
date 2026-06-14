@@ -3,11 +3,11 @@ import pandas as pd
 import plotly.express as px
 
 st.title("📦 Product Analytics")
+import os
+import pandas as pd
 
-df = pd.read_csv(
-    r"C:\Users\vansh soni\PROJECT_2\data\processed\cleaned_sales.csv"
-)
-
+file_path = os.path.join("data", "processed", "cleaned_sales.csv")
+df = pd.read_csv(file_path)
 top_products = (
     df.groupby("Product Name")["Sales"]
       .sum()

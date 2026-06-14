@@ -8,9 +8,11 @@ from sklearn.metrics import mean_absolute_error, r2_score
 st.title("📈 Sales Forecasting Dashboard")
 
 # Load Dataset
-sales_data = pd.read_csv(
-    r"C:\Users\vansh soni\PROJECT_2\data\processed\cleaned_sales.csv"
-)
+import os
+import pandas as pd
+
+file_path = os.path.join("data", "processed", "cleaned_sales.csv")
+sales_data = pd.read_csv(file_path)
 
 sales_data["Order Date"] = pd.to_datetime(
     sales_data["Order Date"]
