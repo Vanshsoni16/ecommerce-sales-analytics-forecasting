@@ -162,7 +162,7 @@ fig = px.bar(
     title="Top 10 Products"
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
 
 
 st.subheader("📌 Business Insights")
